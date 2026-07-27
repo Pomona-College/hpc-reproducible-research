@@ -205,6 +205,7 @@ Write a README for a project (real or hypothetical) with these sections:
 
 If you're unsure about your project structure, discuss with a neighbor.
 
+
 :::::::::::::::::::::::::::::::::::::: solution
 
 ## Solution
