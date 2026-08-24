@@ -66,46 +66,33 @@ The workshop integrates:
 
 ### Episodes
 
-1. **[Why Reproducibility Matters](episodes/01-why-reproducibility.md)** (45 min)
-   - Reproducibility crisis in science
-   - Three levels of reproducibility
-   - Personal and professional benefits
+1. **[Why Reproducibility Matters](episodes/01-why-reproducibility.md)** (30 min)
 
-2. **[Organizing Your Research Project](episodes/02-project-organization.md)** (60 min)
-   - Standard project structure
-   - Separating data, code, and results
-   - Making raw data read-only
-   - Using relative paths
+2. **[The Reproducibility Crisis](episodes/02-reproducibility-crisis.md)** (30 min)
 
-3. **[Capturing Your Computational Environment](episodes/03-environment-capture.md)** (65 min)
-   - Why environments matter
-   - conda for reproducible environments
-   - Creating and exporting environments
-   - HPC module documentation
+3. **[Project Directory Structure](episodes/03-project-directory-structure.md)** (40 min)
 
-4. **[Automating Your Workflow with Make](episodes/04-workflow-automation.md)** (80 min)
-   - Make basics: targets, prerequisites, recipes
-   - Writing multi-step Makefiles
-   - Make variables and patterns
-   - Integrating with SLURM
+4. **[README and Documentation Files](episodes/04-readme-documentation.md)** (35 min)
 
-5. **[Version Control for Research](episodes/05-version-control-research.md)** (70 min)
-   - Git for code and decisions
-   - Meaningful commit messages
-   - Branches for experiments
-   - Using git history as documentation
+5. **[Conda Environment Management](episodes/05-conda-environments.md)** (40 min)
 
-6. **[Scaling Workflows with SLURM](episodes/06-slurm-pipelines.md)** (80 min)
-   - SLURM job submission and monitoring
-   - Job dependencies for sequential workflows
-   - Job arrays for parallel processing
-   - Integrating Make with SLURM
+6. **[pip, Docker, and HPC Modules](episodes/06-pip-and-containers.md)** (30 min)
 
-7. **[Documenting and Sharing Reproducible Research](episodes/07-documentation-sharing.md)** (60 min)
-   - Writing comprehensive READMEs
-   - Licensing research code
-   - Archiving with persistent identifiers (DOIs)
-   - Publishing reproducible research
+7. **[Introduction to Makefiles](episodes/07-intro-makefiles.md)** (40 min)
+
+8. **[Advanced Make Patterns](episodes/08-advanced-make.md)** (40 min)
+
+9. **[Git for Research Projects](episodes/09-git-for-research.md)** (40 min)
+
+10. **[Branching and Collaboration](episodes/10-branching-collaboration.md)** (40 min)
+
+11. **[SLURM Pipeline Basics](episodes/11-slurm-pipeline-basics.md)** (40 min)
+
+12. **[Multi-Step SLURM Workflows](episodes/12-multistep-slurm.md)** (50 min)
+
+13. **[Sharing Your Research](episodes/13-sharing-research.md)** (35 min)
+
+14. **[Putting It All Together](episodes/14-putting-it-together.md)** (40 min)
 
 ### Learner Materials
 
@@ -116,7 +103,6 @@ The workshop integrates:
 ### Instructor Materials
 
 - **[Instructor Notes](instructors/instructor-notes.md)**: Teaching strategies, common issues, timing guidance
-- **[Instructor Guide](instructors/instructor-guide.md)**: Detailed solutions and extended examples (if included)
 
 ## Key Features
 
