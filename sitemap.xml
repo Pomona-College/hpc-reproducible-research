@@ -52,6 +52,12 @@
     <loc>https://pomona-college.github.io/hpc-reproducible-research/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://pomona-college.github.io/hpc-reproducible-research/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-reproducible-research/images.html</loc>
+  </url>
+  <url>
     <loc>https://pomona-college.github.io/hpc-reproducible-research/index.html</loc>
   </url>
   <url>
@@ -106,7 +112,19 @@
     <loc>https://pomona-college.github.io/hpc-reproducible-research/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://pomona-college.github.io/hpc-reproducible-research/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-reproducible-research/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://pomona-college.github.io/hpc-reproducible-research/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-reproducible-research/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-reproducible-research/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://pomona-college.github.io/hpc-reproducible-research/instructor/learner-profiles.html</loc>
@@ -116,6 +134,12 @@
   </url>
   <url>
     <loc>https://pomona-college.github.io/hpc-reproducible-research/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-reproducible-research/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-reproducible-research/key-points.html</loc>
   </url>
   <url>
     <loc>https://pomona-college.github.io/hpc-reproducible-research/learner-profiles.html</loc>
