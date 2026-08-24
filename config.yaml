@@ -1,0 +1,105 @@
+---
+# Carpentries Workbench Configuration
+# Reproducible Research Pipelines Workshop
+
+# Basic metadata
+title: 'Reproducible Research Pipelines — Pomona College HPC Workshop Series'
+carpentry: 'incubator'
+description: 'Capstone workshop on reproducible pipelines: project structure, environments, Make, containers and multi-step SLURM workflows.'
+
+# Project metadata
+created: '2026-03-05'
+contact: 'its-hpc@pomona.edu'
+maintainers:
+  - name: 'Andrew Wilson'
+    email: 'its-hpc@pomona.edu'
+
+# License and source
+license: 'CC-BY 4.0'
+source: 'https://github.com/Pomona-College/hpc-reproducible-research'
+source-repo-type: 'github'
+branch: 'main'
+
+# Lifecycle
+life_cycle: 'stable'
+status: 'Open for community contributions'
+
+# Episodes (in order)
+episodes:
+  - 01-why-reproducibility.md
+  - 02-reproducibility-crisis.md
+  - 03-project-directory-structure.md
+  - 04-readme-documentation.md
+  - 05-conda-environments.md
+  - 06-pip-and-containers.md
+  - 07-intro-makefiles.md
+  - 08-advanced-make.md
+  - 09-git-for-research.md
+  - 10-branching-collaboration.md
+  - 11-slurm-pipeline-basics.md
+  - 12-multistep-slurm.md
+  - 13-sharing-research.md
+  - 14-putting-it-together.md
+
+# Learner materials
+learner-materials:
+  - setup.md
+  - reference.md
+  - learner-profiles.md
+
+# Instructor materials
+instructor-materials:
+  - instructor-notes.md
+  - instructor-guide.md
+
+# Learner profiles
+learner-profiles:
+  - name: 'Postdoc with Python/R skills'
+    description: 'Has domain expertise and knows how to program but has never organized a research project or run code on an HPC cluster'
+  - name: 'Graduate student new to HPC'
+    description: 'Knows Unix and basic Git but struggles with managing complex workflows and dependencies'
+  - name: 'Research software engineer'
+    description: 'Wants to help others create reproducible research and needs best practices to share'
+
+# Languages (for future internationalization)
+lang: 'en'
+
+# Timeout for code blocks
+timeout: 600
+
+# Publishing configuration
+url: 'https://pomona-college.github.io/hpc-reproducible-research/'
+workbench-config-version: 1
+
+# Tags for discoverability
+keywords:
+  - Pomona College
+  - HPC
+  - research computing
+  - reproducible research
+  - SLURM
+  - conda
+  - Make
+  - Git
+  - workflow automation
+  - computational methods
+
+# Learning objectives (overall)
+learning-objectives:
+  - 'Understand the importance of computational reproducibility and its levels'
+  - 'Organize research projects following best practices'
+  - 'Capture and manage computational environments reproducibly'
+  - 'Automate research workflows using Make'
+  - 'Apply version control to research code and experiments'
+  - 'Scale workflows across HPC clusters using SLURM'
+  - 'Document and share reproducible research for maximum impact'
+
+# Directory-based content keys for Sandpaper
+learners:
+- reference.md
+- setup.md
+- learner-profiles.md
+instructors:
+- instructor-notes.md
+profiles:
+- learner-profiles.md
