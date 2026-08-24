@@ -49,6 +49,7 @@ Your computational environment includes everything needed to run your code:
 ### Why Versions Matter
 
 Consider `pandas.read_csv()`. Between versions:
+
 - **pandas 1.3**: parses dates automatically if they look like dates
 - **pandas 1.4**: by default, dates are NOT parsed automatically
 - **pandas 1.5**: date parsing is more lenient, accepts more formats
@@ -60,12 +61,13 @@ Your code `df = pd.read_csv("data.csv")` produces a datetime column on one envir
 **conda** is a package and environment manager. It manages not just Python packages, but also system libraries and other dependencies.
 
 conda comes in two flavors:
+
 - **Anaconda**: Full distribution with hundreds of pre-installed packages (larger download)
 - **Miniconda**: Minimal distribution, you install what you need (recommended for HPC)
 
 On Sagehen, conda is available via:
 ```bash
-module load conda
+module load miniconda3
 ```
 
 ### Creating an Environment
@@ -144,22 +146,26 @@ A practical approach:
 ## Exercise: Export Your Environment
 
 ### Step 1: Create an Environment
+
 ```bash
 conda create -n my-analysis python=3.11 numpy pandas scipy matplotlib
 conda activate my-analysis
 ```
 
 ### Step 2: Install Additional Packages
+
 ```bash
 pip install scikit-learn jupyter
 ```
 
 ### Step 3: Export
+
 ```bash
 conda env export --no-builds | grep -v "^prefix" > environment.yml
 ```
 
 ### Step 4: Test Recreation
+
 ```bash
 conda deactivate
 conda env create -f environment.yml -n test-import
@@ -174,7 +180,7 @@ python -c "import numpy, pandas, scipy; print('Success!')"
 Expected output from each step:
 
 ```bash
-$ module load conda
+$ module load miniconda3
 $ conda create -n my-analysis python=3.11 numpy pandas scipy matplotlib
 Solving environment: done
 Proceed ([y]/n)? y

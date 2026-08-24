@@ -87,7 +87,7 @@ set -euo pipefail
 
 # Source your environment
 source /etc/profile.d/modules.sh
-module load conda
+module load miniconda3
 conda activate my-project
 
 # Define paths
@@ -209,7 +209,7 @@ When a job fails:
    ```bash
    salloc --cpus-per-task=4 --mem=8G --time=00:30:00
    # Now on a compute node
-   module load conda
+   module load miniconda3
    conda activate my-project
    python src/analyze.py data/test.csv output.csv
    ```
@@ -271,6 +271,10 @@ $ squeue -u $(whoami)
   48203       amd    step3     PD  0:00     1  (Dependency)
 ```
 
+![The dependency chain live on Sagehen: step 1 running, steps 2 and 3 pending with reason `(Dependency)` — all on the default `amd` partition.](fig/11-sbatch-dependency-chain-squeue.png){alt='Terminal on Sagehen showing three sbatch submissions where each job ID is captured into a shell variable and the next job depends on it via afterok. The squeue output lists one job running as step1 on node a005 in the amd partition, while two jobs are pending with reason Dependency.'}
+The scripts' SBATCH headers don't set `--partition`, so all three jobs land on
+`amd` -- Sagehen's default partition. Add `--partition=short` (or `gpu`) when a
+step needs a different one.
 Steps 2 and 3 show `PD` (pending) with reason `(Dependency)` until
 their prerequisite job finishes successfully.
 

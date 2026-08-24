@@ -36,7 +36,9 @@ The most reproducible approach: use Make to orchestrate SLURM job submission.
 # HPC-aware Makefile for gene expression pipeline
 
 PYTHON := python3
-SLURM := sbatch
+# --parsable makes sbatch print ONLY the job ID (not "Submitted batch job 12345"),
+# so the .jid files below contain something --dependency=afterok: can actually use.
+SLURM := sbatch --parsable
 SLURM_ARGS := --time=04:00:00 --cpus-per-task=8 --mem=32G
 
 # Track job completion
@@ -285,6 +287,7 @@ Sketch a Makefile for an HPC pipeline with these steps:
 3. **Summarize** -- 1 job, depends on all analysis jobs
 
 For each step, specify:
+
 - SLURM resource requests
 - Dependency relationships
 - Input and output verification in the job scripts

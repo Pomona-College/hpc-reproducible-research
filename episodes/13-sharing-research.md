@@ -39,25 +39,30 @@ Software licenses tell users what they can do with your code, whether they must 
 ### Common Licenses for Research
 
 **MIT License**: Most permissive
+
 - Allow commercial use, modification, distribution
 - Only requirement: include license and attribution
 - **Good for:** Most academic research
 
 **Apache 2.0**: Permissive with patent protection
+
 - Like MIT, but includes explicit patent license
 - **Good for:** Projects with concerns about patent litigation
 
 **GPL (General Public License)**: Restrictive
+
 - Requires derivative works to also be open source
 - **Good for:** When you want improvements shared back
 
 **Creative Commons BY 4.0**: For data and documentation
+
 - For research data and written documentation (not software)
 - Requires attribution
 
 ### Choosing a License
 
 Use [choosealicense.com](https://choosealicense.com/):
+
 - Want commercial use of your work? -- MIT or Apache 2.0
 - Want to protect against patents? -- Apache 2.0
 - Want others to share improvements? -- GPL
@@ -78,6 +83,7 @@ Your research code should live on GitHub (or GitLab). But GitHub repositories ca
 **Zenodo** (zenodo.org) is a free repository run by CERN that archives your code and data permanently, assigns a persistent identifier (DOI), indexes your work in search engines, and preserves it for decades.
 
 To archive on Zenodo:
+
 1. Create a GitHub release tag
 2. Sign in to Zenodo with your GitHub account
 3. Enable Zenodo integration for your repository
@@ -139,6 +145,7 @@ Publish in open-access journals so your work is freely accessible. Higher citati
 ## Exercise: Create a CITATION.cff
 
 Create a `CITATION.cff` file for a project (real or hypothetical) with:
+
 - Your name and affiliation
 - A title and version
 - A license

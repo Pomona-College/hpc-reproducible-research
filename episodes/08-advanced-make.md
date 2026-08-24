@@ -163,6 +163,7 @@ We'll cover SLURM integration in depth in later episodes.
 ### Recipe doesn't run
 
 Check for TAB vs spaces:
+
 ```makefile
 target: prereq
 	echo "OK"       # TAB - works
@@ -172,6 +173,7 @@ target: prereq
 ### Variable not expanding
 
 Makefile variables use `$(VAR)` not `$VAR`:
+
 ```makefile
 FILES := *.csv
 	echo $FILES      # Wrong: prints "$FILES"
@@ -181,6 +183,7 @@ FILES := *.csv
 ### Prerequisites not rebuilding
 
 Check file timestamps:
+
 ```bash
 make -d          # Debug output
 make -n          # Dry run (show what would happen)
@@ -232,13 +235,16 @@ Then modify the Makefile to add a `clean-all` target that removes both results a
 
 ## Solution
 
-```bash
+```
+
+![`make -n` on Sagehen previews every command in the four-stage pipeline without running anything.](fig/08-make-dry-run-pipeline.png){alt='Terminal in a make-demo directory on Sagehen where make -n has been run. The dry-run output lists mkdir and python3 commands for four pipeline stages: cleaning data, analysis, figure generation, and table generation.'}bash
 $ touch src/visualize.py
 $ make -n
 python3 src/visualize.py results/analysis.csv results/figure.png
 ```
 
 Make only re-runs the visualization step because:
+
 - `src/visualize.py` has a newer timestamp than `results/figure.png`
 - But `src/analyze.py` has NOT changed, so `results/analysis.csv` is still up-to-date
 - And `src/process.py` has NOT changed, so `data/processed/data_clean.csv` is still up-to-date

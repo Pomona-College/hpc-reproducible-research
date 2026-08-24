@@ -33,7 +33,9 @@ A good README is essential for reproducibility. Someone should be able to read y
 
 Here's a template:
 
-```markdown
+````markdown
+
+
 # Gene Expression Analysis - Alzheimer's vs. Control
 
 Brief description of the study and research question.
@@ -45,17 +47,20 @@ What scientific question are you answering? What's the scope?
 ## Data
 
 ### Raw Data
+
 - Where does the data come from?
 - How much data is there?
 - How to obtain it (see data/raw/README.md)
 
 ### Processed Data
+
 - What processing steps were applied?
 - See data/processed/PROCESSING_LOG.md for details
 
 ## Methods
 
 Brief summary of analytical approach:
+
 - Statistical tests used
 - Key parameters or thresholds
 - Software versions (see environment.yml)
@@ -63,12 +68,16 @@ Brief summary of analytical approach:
 ## How to Reproduce
 
 ### Setup
+
 1. Install conda
 2. Clone repository: `git clone https://...`
 3. Create environment: `conda env create -f environment.yml`
 4. Activate environment: `conda activate gene-analysis`
 
+
+
 ### Run Analysis
+
 ```bash
 make all
 ```
@@ -77,7 +86,7 @@ Expected runtime: ~5 minutes
 
 ## Project Structure
 
-```
+
 gene_analysis/
 ├── data/
 │   ├── raw/            # Original data (READ-ONLY)
@@ -86,7 +95,7 @@ gene_analysis/
 ├── results/            # Output figures and tables
 ├── Makefile            # Automation
 └── environment.yml     # Dependencies
-```
+
 
 ## Authors and Contact
 
@@ -100,7 +109,7 @@ This work is licensed under CC-BY 4.0 (see LICENSE)
 
 Smith et al. "Gene expression changes" *Journal* (2024)
 doi: 10.1234/example
-```
+````
 
 ## Documenting Data Provenance
 
@@ -146,7 +155,7 @@ Generated: 2024-02-20
 
 Starting with a messy folder, we reorganize to:
 
-```
+```markdown
 gene_analysis/
 ├── README.md
 ├── LICENSE
@@ -181,14 +190,18 @@ If you use Jupyter notebooks, they blur the line between code and exploration. F
 1. **Put exploratory notebooks in `notebooks/`**: These are for learning and trying things
 2. **Write final analysis as clean scripts in `src/`**: These are for reproducibility
 3. **Don't commit notebook outputs**: Add to `.gitignore`:
+   
    ```
    .ipynb_checkpoints/
    notebooks/*.ipynb
    ```
+   
    Or clean them before committing:
+   
    ```bash
    jupyter nbconvert --clear-output notebooks/*.ipynb
    ```
+   
 4. **If notebooks are part of your publication**: Version them carefully, clear outputs before committing, and make sure they're reproducible from scratch
 
 A good practice: exploratory notebooks are for your benefit; your audience benefits from clean scripts and generated figures.
@@ -198,6 +211,7 @@ A good practice: exploratory notebooks are for your benefit; your audience benef
 ## Exercise: Write a Stub README
 
 Write a README for a project (real or hypothetical) with these sections:
+
 - Project Overview (2-3 sentences)
 - Data (where it comes from)
 - How to Reproduce (setup and run commands)
@@ -210,7 +224,7 @@ If you're unsure about your project structure, discuss with a neighbor.
 
 ## Solution
 
-```markdown
+````markdown
 # Sagehen Climate Trend Analysis
 
 Analysis of 30-year temperature trends in Southern California
@@ -245,7 +259,7 @@ climate-trends/
 ├── Makefile
 └── environment.yml
 ```
-```
+````
 
 The README need not be long -- clarity and completeness matter
 more than length.

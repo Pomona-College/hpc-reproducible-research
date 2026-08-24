@@ -26,7 +26,7 @@ The centerpiece of research documentation is the README. A publication-ready REA
 
 ### 1. Overview and Quick Start
 
-```markdown
+````markdown
 # Gene Expression Analysis Pipeline
 
 Analysis of differential gene expression in Alzheimer's disease.
@@ -43,7 +43,7 @@ make all
 ```
 
 Analysis completes in ~4 hours. Results are in `results/`.
-```
+````
 
 ### 2. Methods and Results
 
@@ -133,6 +133,7 @@ Create a complete documentation package for a hypothetical or real research proj
 ### Step 1: Write a README
 
 Create `README.md` with at least these sections:
+
 - Overview (2-3 sentences)
 - Quick Start (requirements, installation, run)
 - Methods (brief explanation of analysis)
@@ -168,9 +169,11 @@ git commit -m "Add documentation and license"
 ```
 
 On GitHub, verify:
+
 - README displays on repository home
 - License is recognized
 - CITATION.cff provides citation format
+
 
 :::::::::::::::::::::::::::::::::::::: solution
 
@@ -179,7 +182,8 @@ On GitHub, verify:
 A completed documentation package should contain these three files:
 
 **README.md:**
-```markdown
+
+````markdown
 # Sagehen Climate Trend Analysis
 
 Analysis of 30-year temperature trends in Southern California
@@ -210,7 +214,7 @@ See `results/figures/trend_plot.pdf`.
 ## License
 
 MIT License (see LICENSE)
-```
+````
 
 **CITATION.cff:**
 ```yaml

@@ -127,7 +127,7 @@ This is a capstone workshop bringing together seven tools and practices essentia
 
    Recommendation: Start loose during development, lock at publication
 
-4. **HPC module system**: On Sagehen, `module load conda` is needed. Document this in `setup_modules.sh`.
+4. **HPC module system**: On Sagehen, `module load miniconda3` is needed. Document this in `setup_modules.sh`.
 
 **Exercise tips:**
 - Have learners create their own environment with their actual packages
@@ -468,7 +468,7 @@ The workshop improves through community contributions.
 
 **"sbatch: command not found"**
 - Cause: Not on login node, or module not loaded
-- Fix: Ensure you're on Sagehen; try `module load slurm`
+- Fix: Make sure you are logged in to Sagehen -- SLURM commands work on the head node without loading any module
 
 **"Job immediately exits with state FAILED"**
 - Cause: Usually resource request too small or syntax error in script

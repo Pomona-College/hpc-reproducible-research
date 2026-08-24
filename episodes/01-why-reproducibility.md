@@ -54,6 +54,7 @@ Let's think about reproducibility in practical layers:
 Someone follows your documentation, uses your code and data, and gets the same numbers you did.
 
 **What you need:**
+
 - Code (scripts, programs, Jupyter notebooks)
 - Raw data
 - Complete documentation of the analysis steps
@@ -65,6 +66,7 @@ Someone follows your documentation, uses your code and data, and gets the same n
 Someone understands your analysis methodology, adapts it to their own data or context, and reaches the same scientific conclusions.
 
 **What you need:**
+
 - Clear explanation of your methodology (written description, not just code)
 - Justification for your choices (why this statistical test? why this cutoff value?)
 - Understanding of limitations and assumptions
@@ -75,6 +77,7 @@ Someone understands your analysis methodology, adapts it to their own data or co
 Someone can understand how you went from raw question to final figure, including the dead ends, iterations, and decision points.
 
 **What you need:**
+
 - Version control showing the history of your analysis
 - Lab notebook or documented decisions explaining why you did things a certain way
 - Scripts and code in a logical order matching your analysis progression
@@ -93,6 +96,7 @@ This happens to most researchers. The solution: **be the kind of colleague you'd
 ### Easier Collaboration
 
 When you have reproducible code and a clear project structure:
+
 - A collaborator can check out your repository and run your analysis without emailing you questions
 - They can extend your code confidently, knowing what the baseline behavior is
 - You can merge their improvements back in without breaking things
@@ -108,6 +112,7 @@ Sharing code and data gets you more citations, builds your reputation as rigorou
 ## Discussion: Your Reproducibility Challenge
 
 In your own research (or research you're familiar with):
+
 1. Think of a recent analysis you completed or reviewed
 2. Imagine someone else (or you, 3 years from now) trying to reproduce it
 3. What would be hard to reconstruct?
@@ -122,6 +127,7 @@ Discuss with a neighbor or note down 2-3 key obstacles.
 Common discussion points participants typically raise:
 
 **Hard to reconstruct:**
+
 - Which version of a script produced the final results
 - What software versions were installed at the time
 - Manual steps performed in Excel or a GUI tool
@@ -129,6 +135,7 @@ Common discussion points participants typically raise:
 - Parameter choices that were tested but not documented
 
 **Easier to reconstruct:**
+
 - Which raw data files were used (if well-named)
 - The general analytical approach (if documented in a paper)
 - Final figures and tables (if saved)

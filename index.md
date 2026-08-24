@@ -11,6 +11,7 @@ Welcome to the **Reproducible Research Pipelines** workshop! This is a capstone 
 Computational research has become increasingly central to scientific discovery, but with that opportunity comes a significant challenge: **How do we ensure our results are reproducible?** When code runs on different machines, with different software versions, or with subtle variations in how analysis steps are ordered, results can diverge; sometimes subtly, sometimes dramatically.
 
 This workshop teaches you to build research pipelines that:
+
 - **Run the same way every time** on your machine, your collaborator's machine, or an HPC cluster
 - **Capture all dependencies** so you know exactly what versions of software were used
 - **Automate complex workflows** so nothing is forgotten or done manually
@@ -21,6 +22,7 @@ This workshop teaches you to build research pipelines that:
 ## Who Is This Workshop For?
 
 This is an **advanced workshop** designed for researchers who:
+
 - Have basic Unix shell and Python/R programming skills
 - May have some experience with version control using Git
 - Want to move beyond "it works on my machine" to truly reproducible science
@@ -66,6 +68,7 @@ By the end of this workshop, you will be able to:
 ## How to Use This Material
 
 Each episode contains:
+
 - **Learning objectives** at the start
 - **Narrative explanations** and key concepts
 - **Code examples** you can run on Sagehen
@@ -79,6 +82,7 @@ Episodes build on each other, so we recommend working through them in order. How
 ::::::::::::::::::::::::::::::::: prereq
 
 Before starting, you should:
+
 - Be comfortable with the Unix shell (navigating directories, running commands, redirecting output)
 - Have basic programming experience in Python or R
 - Have access to Sagehen (sagehen.hpc.pomona.edu) or another SLURM-based HPC cluster
@@ -91,8 +95,9 @@ If you need a refresher, see the [Setup](learners/setup.md) page.
 ## Cluster Setup
 
 All examples assume you're running on **Sagehen** with:
+
 - Lmod module system
-- conda available via `module load conda`
+- conda available via `module load miniconda3`
 - Standard Unix tools (Make, git, etc.)
 
 If you're using a different cluster, the commands should transfer with minor adjustments to module names or job submission parameters.

@@ -23,6 +23,7 @@ exercises: 15
 ## The Manual Problem
 
 A researcher has this analysis procedure:
+
 1. Download raw data
 2. Clean the data (remove bad rows, fix formatting)
 3. Run analysis (compute statistics)
@@ -53,6 +54,7 @@ This is tedious and error-prone. The solution: **Make**, a tool that automates s
 ## What Is Make?
 
 Make is a tool that:
+
 - Defines a series of analysis steps
 - Tracks which outputs depend on which inputs
 - Automatically re-runs steps when their inputs change
@@ -190,11 +192,13 @@ make clean        # Clean up
 ## Exercise: Write a Basic Makefile
 
 Create a Makefile for a three-step pipeline:
+
 1. Process raw data -> processed data
 2. Analyze processed data -> results
 3. Create figure from results -> figure
 
 Define:
+
 - Variables for data directories
 - Targets for each output
 - Prerequisites between targets

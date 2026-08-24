@@ -33,7 +33,7 @@ This led to retracted papers, lawsuits, and real harm to cancer patients who had
 
 In 2012, researchers discovered that a widely-used genetics software tool had a bug in how it handled missing data. This bug had been silently present for years, affecting hundreds of published papers. Researchers had to spend months tracking down affected analyses to understand which results were compromised.
 
-A 2015 survey in *Nature* found that over 70% of researchers had failed to reproduce another scientist's published experiment, and over 50% had failed to reproduce their own prior work.
+A 2016 survey in *Nature* found that over 70% of researchers had failed to reproduce another scientist's published experiment, and over 50% had failed to reproduce their own prior work.
 
 ### Why This Matters Beyond Science
 
@@ -55,6 +55,7 @@ Your laptop has Python 3.11, numpy 1.24.3, and pandas 2.0.1 installed. Your coll
 ### Manual Steps
 
 You've got a script that processes data, but there are a few steps you always do manually:
+
 - Open the output CSV, check for weird rows, delete them
 - Open the figure in Photoshop to adjust colors and fonts
 - Run the script three times with slightly different parameters and combine the results

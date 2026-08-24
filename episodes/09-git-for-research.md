@@ -36,6 +36,7 @@ Git solves this, but we need to use it differently for research than for softwar
 ### YES: Track These
 
 **Code (scripts, notebooks, Makefiles)**
+
 ```
 src/analyze.py
 src/visualize.py
@@ -43,6 +44,7 @@ Makefile
 ```
 
 **Documentation (README, analysis plans)**
+
 ```
 README.md
 ANALYSIS_PLAN.md
@@ -50,6 +52,7 @@ METHODS.md
 ```
 
 **Small configuration files**
+
 ```
 config.yaml
 environment.yml
@@ -57,6 +60,7 @@ environment.yml
 ```
 
 **Results (figures, tables): But carefully**
+
 - Small figures (PDF, PNG): OK to track
 - Large figures or datasets: Better stored elsewhere
 - Use git lfs (Large File Storage) for anything over a few MB
@@ -64,6 +68,7 @@ environment.yml
 ### NO: Don't Track These
 
 **Raw Data** -- immutable, wastes storage:
+
 ```bash
 # .gitignore
 data/raw/
@@ -75,6 +80,7 @@ data/*.csv
 Instead, document where to obtain it in `data/raw/README.md`.
 
 **Processed/Intermediate Data** -- regeneratable:
+
 ```bash
 # .gitignore
 data/processed/
@@ -83,6 +89,7 @@ results/
 ```
 
 **Large Binary Files**:
+
 ```bash
 *.pkl
 *.npy
@@ -91,6 +98,7 @@ results/
 ```
 
 **Machine-Specific and Sensitive Files**:
+
 ```bash
 .DS_Store
 __pycache__/
@@ -208,6 +216,7 @@ credentials.json
 ## Exercise: Initialize a Research Project in Git
 
 ### Step 1: Create a Project
+
 ```bash
 mkdir my-research && cd my-research
 mkdir src data results
@@ -215,6 +224,7 @@ echo "# My Research Project" > README.md
 ```
 
 ### Step 2: Initialize Git
+
 ```bash
 git init
 git config user.name "Your Name"
@@ -222,6 +232,7 @@ git config user.email "your.email@institution.edu"
 ```
 
 ### Step 3: Create .gitignore and Commit
+
 ```bash
 cat > .gitignore << 'EOF'
 data/raw/
@@ -240,6 +251,7 @@ Created .gitignore to prevent accidental commits of large data files."
 ```
 
 ### Step 4: Add a Script with a Meaningful Message
+
 ```bash
 cat > src/analyze.py << 'EOF'
 """Example analysis script."""
@@ -258,7 +270,7 @@ Verify your history with `git log --oneline`.
 
 ```bash
 $ git init
-Initialized empty Git repository in /rhome/username/my-research/.git/
+Initialized empty Git repository in /rhome/<myusername>/my-research/.git/
 
 $ git add README.md .gitignore
 $ git commit -m "Initialize project structure
@@ -291,3 +303,6 @@ a1b2c3d Initialize project structure
 - .gitignore keeps large/sensitive/irrelevant files out of version control
 
 ::::::::::::::::::::::::::::::::::::::::::::::
+
+<!-- highlight <labname>/<myusername> placeholders in code blocks; remove if the varnish theme handles this natively -->
+<script>(function(){var CSS='.sh-placeholder{color:#c2410c;font-weight:700}[data-bs-theme="dark"] .sh-placeholder,html.dark .sh-placeholder{color:#fdba74}@media (prefers-color-scheme: dark){[data-bs-theme="auto"] .sh-placeholder{color:#fdba74}}';var RX=/<labname>|<myusername>/g;function firstMatch(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),nodes=[],full='';while(w.nextNode()){nodes.push({n:w.currentNode,s:full.length});full+=w.currentNode.nodeValue;}RX.lastIndex=0;var m;while((m=RX.exec(full))){var s=m.index,e=s+m[0].length,inSpan=false,parts=[];for(var j=0;j<nodes.length;j++){var ns=nodes[j].s,ne=ns+nodes[j].n.nodeValue.length;if(ne<=s||ns>=e)continue;parts.push({node:nodes[j].n,a:Math.max(s-ns,0),b:Math.min(e-ns,nodes[j].n.nodeValue.length)});var p=nodes[j].n.parentNode;while(p&&p!==el){if(p.classList&&p.classList.contains('sh-placeholder')){inSpan=true;break;}p=p.parentNode;}}if(!inSpan&&parts.length)return parts;}return null;}function wrapParts(parts){for(var i=parts.length-1;i>=0;i--){var t=parts[i].node,txt=t.nodeValue,a=parts[i].a,b=parts[i].b;var span=document.createElement('span');span.className='sh-placeholder';span.textContent=txt.slice(a,b);var f=document.createDocumentFragment();if(a>0)f.appendChild(document.createTextNode(txt.slice(0,a)));f.appendChild(span);if(b<txt.length)f.appendChild(document.createTextNode(txt.slice(b)));t.parentNode.replaceChild(f,t);}}function run(){var st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);document.querySelectorAll('pre,code').forEach(function(el){var guard=0,parts;while((parts=firstMatch(el))&&guard++<500){wrapParts(parts);}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}})();</script>

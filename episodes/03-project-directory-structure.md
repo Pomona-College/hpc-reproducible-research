@@ -47,6 +47,7 @@ gene_analysis/
 ```
 
 Questions she can't answer:
+
 - Which data file is the original? Which was modified?
 - Which analysis script is the one she actually used?
 - What did she change between analysis.R and analysis_final.R?

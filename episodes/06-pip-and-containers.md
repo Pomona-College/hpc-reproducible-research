@@ -122,18 +122,21 @@ On HPC clusters using Lmod, you load modules that provide software:
 
 ```bash
 module load openmpi
-module load intel/oneapi/2023
-module load fftw
+module load r
+module load cuda
 ```
+
+(On Sagehen the real module names are `openmpi/4.1.5_ucx-1.14.0`, `r/4.5.1`,
+`cuda/12.2.1`, and so on -- run `module avail` to see what is installed. There
+are no `intel`, `fftw`, or `gcc` modules.)
 
 These modify your environment but aren't captured by `conda env export`. Document them in a setup script:
 
 ```bash
 cat > setup_modules.sh << 'EOF'
 #!/bin/bash
-module load python/3.11
-module load openmpi/4.1
-module load fftw/3.3.10
+module load miniconda3/py313_26.3.2-2
+module load openmpi/4.1.5_ucx-1.14.0
 conda env create -f environment.yml
 conda activate my-project
 EOF
@@ -187,13 +190,14 @@ bwa) that conda-forge and bioconda provide as pre-compiled binaries.
 **Dependencies:** python=3.11, numpy, pandas, samtools, bwa,
 salmon, pip: deseq2, scanpy
 
-**HPC modules:** `module load conda` (to access conda itself),
+**HPC modules:** `module load miniconda3` (to access conda itself),
 no other system modules needed since conda handles everything.
 
 **Justification:** Conda handles the complex binary dependencies
 (samtools, bwa) that pip cannot install. Docker would be overkill
 since all dependencies are available through conda channels, and
-Singularity availability on Sagehen should be confirmed first.
+Sagehen provides Apptainer (`module load apptainer`) if a container
+is ever needed.
 
 ::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -204,7 +208,7 @@ Singularity availability on Sagehen should be confirmed first.
 - pip and requirements.txt are alternatives for pure Python projects
 - Docker provides maximum reproducibility but adds complexity; useful for complex environments
 - On HPC clusters, document module dependencies separately from conda
-- Singularity is the Docker equivalent for HPC clusters where Docker is unavailable
+- Apptainer (formerly Singularity) is the Docker equivalent for HPC clusters where Docker is unavailable -- on Sagehen: `module load apptainer`
 - Include environment files, setup scripts, and module lists in your repository
 
 ::::::::::::::::::::::::::::::::::::::::::::::

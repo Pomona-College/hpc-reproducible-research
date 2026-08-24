@@ -167,7 +167,7 @@ The workshop integrates:
 This workshop uses Sagehen (sagehen.hpc.pomona.edu):
 - SLURM job scheduler
 - Lmod module system
-- conda available via `module load conda`
+- conda available via `module load miniconda3`
 
 Adaptable to other SLURM clusters by changing module names and paths.
 
