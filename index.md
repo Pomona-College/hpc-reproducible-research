@@ -105,7 +105,7 @@ If you're using a different cluster, the commands should transfer with minor adj
 ## Support & Questions
 
 - **Workshop contact:** its-hpc@pomona.edu
-- **Issues & contributions:** See our [GitHub repository](https://github.com/pomona-college-hpc/reproducible-research)
+- **Issues & contributions:** See our [GitHub repository](https://github.com/Pomona-College/hpc-reproducible-research)
 - **Carpentries community:** Connect with us on [The Carpentries community forum](https://carpentries.org/)
 
 This is an **open, community-contributable** workshop. If you find errors, have suggestions, or want to add examples relevant to your field, please open an issue or pull request!

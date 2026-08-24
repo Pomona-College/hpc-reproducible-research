@@ -24,7 +24,7 @@ The workshop integrates:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/pomona-college-hpc/reproducible-research.git
+   git clone https://github.com/Pomona-College/hpc-reproducible-research.git
    cd reproducible-research
    ```
 
@@ -212,14 +212,14 @@ This work is licensed under **Creative Commons Attribution 4.0 (CC-BY 4.0)**.
 ```
 Wilson, A. (2024). Reproducible Research Pipelines.
 The Carpentries Incubator.
-Retrieved from https://github.com/pomona-college-hpc/reproducible-research
+Retrieved from https://github.com/Pomona-College/hpc-reproducible-research
 ```
 
 ## Contact and Support
 
 ### Questions or Issues
 
-- **GitHub Issues:** https://github.com/pomona-college-hpc/reproducible-research/issues
+- **GitHub Issues:** https://github.com/Pomona-College/hpc-reproducible-research/issues
 - **Email:** its-hpc@pomona.edu (HPC support at Pomona College)
 
 ### Acknowledgments
@@ -266,7 +266,7 @@ Future improvements (contributions welcome):
 
 - Review the [Reference](learners/reference.md) for quick answers
 - Check the [Learner Profiles](learners/learner-profiles.md) to see if your situation is covered
-- Open an [issue on GitHub](https://github.com/pomona-college-hpc/reproducible-research/issues) with your question
+- Open an [issue on GitHub](https://github.com/Pomona-College/hpc-reproducible-research/issues) with your question
 
 ### I'm an instructor and need teaching materials
 

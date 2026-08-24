@@ -16,7 +16,7 @@ maintainers:
 
 # License and source
 license: 'CC-BY 4.0'
-source: 'https://github.com/pomona-college-hpc/reproducible-research'
+source: 'https://github.com/Pomona-College/hpc-reproducible-research'
 source-repo-type: 'github'
 branch: 'main'
 
@@ -68,7 +68,7 @@ lang: 'en'
 timeout: 600
 
 # Publishing configuration
-url: 'https://pomona-college-hpc.github.io/reproducible-research/'
+url: 'https://pomona-college.github.io/hpc-reproducible-research/'
 workbench-config-version: 1
 
 # Tags for discoverability
