@@ -5,7 +5,7 @@
 # Basic metadata
 title: 'Reproducible Research Pipelines — Pomona College HPC Workshop Series'
 carpentry: 'incubator'
-description: 'An end-to-end workshop on building reproducible computational research pipelines using Git, conda, Make, and SLURM on HPC clusters.'
+description: 'Capstone workshop on reproducible pipelines: project structure, environments, Make, containers and multi-step SLURM workflows.'
 
 # Project metadata
 created: '2026-03-05'
