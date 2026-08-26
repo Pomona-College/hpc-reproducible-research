@@ -272,3 +272,11 @@ Future improvements (contributions welcome):
 **Happy reproducible researching!**
 
 This workshop represents years of experience in computational science and HPC education. We hope it helps you and your research community adopt practices that make science faster, clearer, and more trustworthy.
+
+## Acknowledgments
+
+**Andrew Wilson** — Director of Research Computing and Digital Scholarship,
+Pomona College. Workshop design and development.
+
+**Andrei Motchenko** — testing, editing, cleanup and screenshots across the
+Pomona College HPC Workshop Series.

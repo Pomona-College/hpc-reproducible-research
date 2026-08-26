@@ -162,3 +162,9 @@ before it, so work through them in order the first time.
 - [Reference](learners/reference.md) — commands and patterns at a glance
 - [Learner Profiles](profiles/learner-profiles.md) — who this workshop is written for
 - [Instructor Notes](instructors/instructor-notes.md) — timing, common questions, teaching notes
+
+## Acknowledgments
+
+Developed by **Andrew Wilson**, Director of Research Computing and Digital
+Scholarship at Pomona College, with **Andrei Motchenko**, who tested, edited
+and produced screenshots for the workshop series.
