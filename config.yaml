@@ -42,24 +42,10 @@ episodes:
   - 14-putting-it-together.md
 
 # Learner materials
-learner-materials:
-  - setup.md
-  - reference.md
-  - learner-profiles.md
 
 # Instructor materials
-instructor-materials:
-  - instructor-notes.md
-  - instructor-guide.md
 
 # Learner profiles
-learner-profiles:
-  - name: 'Postdoc with Python/R skills'
-    description: 'Has domain expertise and knows how to program but has never organized a research project or run code on an HPC cluster'
-  - name: 'Graduate student new to HPC'
-    description: 'Knows Unix and basic Git but struggles with managing complex workflows and dependencies'
-  - name: 'Research software engineer'
-    description: 'Wants to help others create reproducible research and needs best practices to share'
 
 # Languages (for future internationalization)
 lang: 'en'
@@ -98,7 +84,6 @@ learning-objectives:
 learners:
 - reference.md
 - setup.md
-- learner-profiles.md
 instructors:
 - instructor-notes.md
 profiles:
