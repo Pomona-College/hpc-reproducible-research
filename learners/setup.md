@@ -18,7 +18,7 @@ You need:
 
 ### HPC Access
 
-- **Access to Sagehen** (sagehen.hpc.pomona.edu) or another SLURM-based HPC cluster
+- **Access to Sagehen HPC** (sagehen.hpc.pomona.edu) or another SLURM-based HPC cluster
 - **SSH key pair** configured for cluster access
 - Familiarity with `ssh` and basic command-line navigation
 

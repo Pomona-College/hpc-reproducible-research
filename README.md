@@ -48,7 +48,7 @@ The workshop integrates:
    - Check troubleshooting appendix
 
 2. **Adapt for your context:**
-   - Modify Sagehen references to match your HPC cluster
+   - Modify Sagehen HPC references to match your HPC cluster
    - Use field-specific examples in your domain
    - Customize exercise data
 

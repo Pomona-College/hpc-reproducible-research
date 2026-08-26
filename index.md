@@ -146,7 +146,7 @@ before it, so work through them in order the first time.
 9. [Git for Research Projects](episodes/09-git-for-research.md)
 10. [Branching and Collaboration](episodes/10-branching-collaboration.md)
 
-**Running it on Sagehen**
+**Running it on Sagehen HPC**
 
 11. [SLURM Pipeline Basics](episodes/11-slurm-pipeline-basics.md)
 12. [Multi-Step SLURM Workflows](episodes/12-multistep-slurm.md)

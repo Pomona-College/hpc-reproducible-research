@@ -235,9 +235,9 @@ Then modify the Makefile to add a `clean-all` target that removes both results a
 
 ## Solution
 
-```
+![`make -n` on Sagehen HPC previews every command in the four-stage pipeline without running anything.](fig/08-make-dry-run-pipeline.png){alt='Terminal in a make-demo directory on Sagehen HPC where make -n has been run. The dry-run output lists mkdir and python3 commands for four pipeline stages: cleaning data, analysis, figure generation, and table generation.'}
 
-![`make -n` on Sagehen previews every command in the four-stage pipeline without running anything.](fig/08-make-dry-run-pipeline.png){alt='Terminal in a make-demo directory on Sagehen where make -n has been run. The dry-run output lists mkdir and python3 commands for four pipeline stages: cleaning data, analysis, figure generation, and table generation.'}bash
+```bash
 $ touch src/visualize.py
 $ make -n
 python3 src/visualize.py results/analysis.csv results/figure.png

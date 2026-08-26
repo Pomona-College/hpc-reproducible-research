@@ -126,7 +126,7 @@ module load r
 module load cuda
 ```
 
-(On Sagehen the real module names are `openmpi/4.1.5_ucx-1.14.0`, `r/4.5.1`,
+(On Sagehen HPC the real module names are `openmpi/4.1.5_ucx-1.14.0`, `r/4.5.1`,
 `cuda/12.2.1`, and so on -- run `module avail` to see what is installed. There
 are no `intel`, `fftw`, or `gcc` modules.)
 
