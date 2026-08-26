@@ -118,22 +118,47 @@ This material is made available under the Creative Commons Attribution 4.0 licen
 
 ## Workshop Chapters
 
-<div class="row">
-  <div class="col-md-6">
-    <h3>Core Content</h3>
-    <ul>
-    {% for episode in site.episodes %}
-      <li><a href="{{ site.baseurl }}/{{ episode.url }}">{{ episode.title }}</a></li>
-    {% endfor %}
-    </ul>
-  </div>
-  <div class="col-md-6">
-    <h3>Resources</h3>
-    <ul>
-      <li><a href="{{ site.baseurl }}/learners/setup.html">Setup Instructions</a></li>
-      <li><a href="{{ site.baseurl }}/learners/reference.html">Reference</a></li>
-      <li><a href="{{ site.baseurl }}/learners/learner-profiles.html">Learner Profiles</a></li>
-      <li><a href="{{ site.baseurl }}/instructors/instructor-notes.html">Instructor Notes</a></li>
-    </ul>
-  </div>
-</div>
+The fourteen episodes build one pipeline in stages. Each depends on the one
+before it, so work through them in order the first time.
+
+**Foundations**
+
+1. [Why Reproducibility Matters](episodes/01-why-reproducibility.md)
+2. [The Reproducibility Crisis](episodes/02-reproducibility-crisis.md)
+
+**Organising a project**
+
+3. [Project Directory Structure](episodes/03-project-directory-structure.md)
+4. [README and Documentation Files](episodes/04-readme-documentation.md)
+
+**Capturing your environment**
+
+5. [Conda Environment Management](episodes/05-conda-environments.md)
+6. [pip, Docker, and HPC Modules](episodes/06-pip-and-containers.md)
+
+**Automating the work**
+
+7. [Introduction to Makefiles](episodes/07-intro-makefiles.md)
+8. [Advanced Make Patterns](episodes/08-advanced-make.md)
+
+**Tracking changes**
+
+9. [Git for Research Projects](episodes/09-git-for-research.md)
+10. [Branching and Collaboration](episodes/10-branching-collaboration.md)
+
+**Running it on Sagehen**
+
+11. [SLURM Pipeline Basics](episodes/11-slurm-pipeline-basics.md)
+12. [Multi-Step SLURM Workflows](episodes/12-multistep-slurm.md)
+
+**Publishing**
+
+13. [Sharing Your Research](episodes/13-sharing-research.md)
+14. [Putting It All Together](episodes/14-putting-it-together.md)
+
+## Resources
+
+- [Setup Instructions](learners/setup.md) — do this before the first session
+- [Reference](learners/reference.md) — commands and patterns at a glance
+- [Learner Profiles](profiles/learner-profiles.md) — who this workshop is written for
+- [Instructor Notes](instructors/instructor-notes.md) — timing, common questions, teaching notes
