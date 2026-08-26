@@ -228,7 +228,7 @@ This workshop is part of The Carpentries Incubator. Connect with other instructo
 ## Version History
 
 - **v1.0** (March 2026) :  Initial release
-  - 7 episodes covering complete reproducible workflow
+  - 14 episodes covering complete reproducible workflow
   - Learner and instructor materials
   - Sagehen-specific examples
   - Tested with beta learners
