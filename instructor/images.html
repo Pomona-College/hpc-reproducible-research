@@ -449,14 +449,40 @@
         <h1>All Images</h1>
         
 <section id="01-why-reproducibility"><h2 class="section-heading"><a href="01-why-reproducibility.html">Why Reproducibility Matters</a></h2>
-<hr class="half-width"></section><section id="02-reproducibility-crisis"><h2 class="section-heading"><a href="02-reproducibility-crisis.html">The Reproducibility Crisis</a></h2>
+<hr class="half-width">
+<h3 id="01-why-reproducibility-figure-1">Figure 1</h3>
+<p aria-hidden="true">Image 1 of 1: ‘A pipeline from read-only raw data through a processing script to clean data, then an analysis script producing figures and tables. Underneath, a note that environment.yml pins the software, git records every change, and Make re-runs only what has gone stale.’</p>
+<figure><img src="../fig/02-reproducibility-workflow.png" alt="A pipeline from read-only raw data through a processing script to clean data, then an analysis script producing figures and tables. Underneath, a note that environment.yml pins the software, git records every change, and Make re-runs only what has gone stale." class="figure mx-auto d-block"><div class="figcaption">Everything downstream of raw data should come
+back from the scripts.</div>
+</figure><hr></section><section id="02-reproducibility-crisis"><h2 class="section-heading"><a href="02-reproducibility-crisis.html">The Reproducibility Crisis</a></h2>
 <hr class="half-width"></section><section id="03-project-directory-structure"><h2 class="section-heading"><a href="03-project-directory-structure.html">Project Directory Structure</a></h2>
-<hr class="half-width"></section><section id="04-readme-documentation"><h2 class="section-heading"><a href="04-readme-documentation.html">README and Documentation Files</a></h2>
+<hr class="half-width">
+<h3 id="03-project-directory-structure-figure-1">Figure 1</h3>
+<p aria-hidden="true">Image 1 of 1: ‘A project directory layout. data/raw is never edited and kept read-only. data/processed is generated and safe to delete. src holds your scripts. results holds generated figures and tables. environment.yml records the exact software versions and the Makefile records how to rebuild everything. A note says that if you deleted everything generated, the Makefile and environment.yml should be able to rebuild it.’</p>
+<figure><img src="../fig/01-project-structure.png" alt="A project directory layout. data/raw is never edited and kept read-only. data/processed is generated and safe to delete. src holds your scripts. results holds generated figures and tables. environment.yml records the exact software versions and the Makefile records how to rebuild everything. A note says that if you deleted everything generated, the Makefile and environment.yml should be able to rebuild it." class="figure mx-auto d-block"><div class="figcaption">The layout tells you what is safe to delete and
+what is not.</div>
+</figure><hr></section><section id="04-readme-documentation"><h2 class="section-heading"><a href="04-readme-documentation.html">README and Documentation Files</a></h2>
 <hr class="half-width"></section><section id="05-conda-environments"><h2 class="section-heading"><a href="05-conda-environments.html">Conda Environment Management</a></h2>
 <hr class="half-width"></section><section id="06-pip-and-containers"><h2 class="section-heading"><a href="06-pip-and-containers.html">pip, Docker, and HPC Modules</a></h2>
-<hr class="half-width"></section><section id="07-intro-makefiles"><h2 class="section-heading"><a href="07-intro-makefiles.html">Introduction to Makefiles</a></h2>
-<hr class="half-width"></section><section id="08-advanced-make"><h2 class="section-heading"><a href="08-advanced-make.html">Advanced Make Patterns</a></h2>
-<hr class="half-width"></section><section id="09-git-for-research"><h2 class="section-heading"><a href="09-git-for-research.html">Git for Research Projects</a></h2>
+<hr class="half-width">
+<h3 id="06-pip-and-containers-figure-1">Figure 1</h3>
+<p aria-hidden="true">Image 1 of 1: ‘A decision tree for choosing a workflow tool. If the pipeline has fewer than about ten steps, use Make, which is already installed. If it involves many SLURM jobs or a complex dependency graph, use Snakemake, which is Python-based and SLURM-aware. Otherwise start with Make and move on only when it stops fitting.’</p>
+<figure><img src="../fig/04-tool-decision.png" alt="A decision tree for choosing a workflow tool. If the pipeline has fewer than about ten steps, use Make, which is already installed. If it involves many SLURM jobs or a complex dependency graph, use Snakemake, which is Python-based and SLURM-aware. Otherwise start with Make and move on only when it stops fitting." class="figure mx-auto d-block"><div class="figcaption">Start with Make; move on only when it stops
+fitting.</div>
+</figure><hr></section><section id="07-intro-makefiles"><h2 class="section-heading"><a href="07-intro-makefiles.html">Introduction to Makefiles</a></h2>
+<hr class="half-width">
+<h3 id="07-intro-makefiles-figure-1">Figure 1</h3>
+<p aria-hidden="true">Image 1 of 1: ‘A dependency graph. download_data fetches raw files, clean_data removes outliers, and the pipeline then splits into analyze which runs statistics and train_model which fits the model. Those lead to visualize which creates plots and evaluate which tests accuracy, and both feed into report, which compiles the paper.’</p>
+<figure><img src="../fig/03-make-dag.png" alt="A dependency graph. download_data fetches raw files, clean_data removes outliers, and the pipeline then splits into analyze which runs statistics and train_model which fits the model. Those lead to visualize which creates plots and evaluate which tests accuracy, and both feed into report, which compiles the paper." class="figure mx-auto d-block"><div class="figcaption">Make works out which steps are stale and re-runs
+only those.</div>
+</figure><hr></section><section id="08-advanced-make"><h2 class="section-heading"><a href="08-advanced-make.html">Advanced Make Patterns</a></h2>
+<hr class="half-width">
+<h3 id="08-advanced-make-figure-1">Figure 1</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Terminal in a make-demo directory on Sagehen HPC where make -n has been run. The dry-run output lists mkdir and python3 commands for four pipeline stages: cleaning data, analysis, figure generation, and table generation.’</p>
+<figure><img src="../fig/08-make-dry-run-pipeline.png" alt="Terminal in a make-demo directory on Sagehen HPC where make -n has been run. The dry-run output lists mkdir and python3 commands for four pipeline stages: cleaning data, analysis, figure generation, and table generation." class="figure mx-auto d-block"><div class="figcaption">
+<code>make -n</code> on Sagehen HPC previews
+every command in the four-stage pipeline without running anything.</div>
+</figure><hr></section><section id="09-git-for-research"><h2 class="section-heading"><a href="09-git-for-research.html">Git for Research Projects</a></h2>
 <hr class="half-width"></section><section id="10-branching-collaboration"><h2 class="section-heading"><a href="10-branching-collaboration.html">Branching and Collaboration</a></h2>
 <hr class="half-width"></section><section id="11-slurm-pipeline-basics"><h2 class="section-heading"><a href="11-slurm-pipeline-basics.html">SLURM Pipeline Basics</a></h2>
 <hr class="half-width">
@@ -522,8 +548,8 @@ successfully.</p>
   "url": "https://pomona-college.github.io/hpc-reproducible-research/instructor/images.html",
   "identifier": "https://pomona-college.github.io/hpc-reproducible-research/instructor/images.html",
   "dateCreated": "2026-03-05",
-  "dateModified": "2026-08-26",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>

@@ -384,7 +384,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction to Makefiles</h1>
-        <p>Last updated on 2026-08-24 |
+        <p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-reproducible-research/edit/main/episodes/07-intro-makefiles.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -452,7 +452,9 @@ halfway, where do I restart?</p>
 <p>This is tedious and error-prone. The solution: <strong>Make</strong>,
 a tool that automates step-by-step workflows and only re-runs what’s
 necessary.</p>
-</section><section><h2 class="section-heading" id="what-is-make">What Is Make?<a class="anchor" aria-label="anchor" href="#what-is-make"></a></h2>
+<figure><img src="fig/03-make-dag.png" alt="A dependency graph. download_data fetches raw files, clean_data removes outliers, and the pipeline then splits into analyze which runs statistics and train_model which fits the model. Those lead to visualize which creates plots and evaluate which tests accuracy, and both feed into report, which compiles the paper." class="figure mx-auto d-block"><div class="figcaption">Make works out which steps are stale and re-runs
+only those.</div>
+</figure></section><section><h2 class="section-heading" id="what-is-make">What Is Make?<a class="anchor" aria-label="anchor" href="#what-is-make"></a></h2>
 <hr class="half-width"><p>Make is a tool that:</p>
 <ul><li>Defines a series of analysis steps</li>
 <li>Tracks which outputs depend on which inputs</li>
@@ -764,8 +766,8 @@ any links that you are not going to use.
   "url": "https://pomona-college.github.io/hpc-reproducible-research/07-intro-makefiles.html",
   "identifier": "https://pomona-college.github.io/hpc-reproducible-research/07-intro-makefiles.html",
   "dateCreated": "2026-03-05",
-  "dateModified": "2026-08-24",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>

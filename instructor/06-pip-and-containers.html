@@ -384,7 +384,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>pip, Docker, and HPC Modules</h1>
-        <p>Last updated on 2026-08-24 |
+        <p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-reproducible-research/edit/main/episodes/06-pip-and-containers.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -469,7 +469,9 @@ dependencies and pip to manage Python packages</li>
 <span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a><span class="at">    </span><span class="kw">-</span><span class="at"> tensorflow==2.8.0</span></span>
 <span id="cb4-11"><a href="#cb4-11" tabindex="-1" aria-label="code-block-4-11"></a><span class="at">    </span><span class="kw">-</span><span class="at"> scikit-learn==1.2.2</span></span></code></pre>
 </div>
-</div>
+<figure><img src="../fig/04-tool-decision.png" alt="A decision tree for choosing a workflow tool. If the pipeline has fewer than about ten steps, use Make, which is already installed. If it involves many SLURM jobs or a complex dependency graph, use Snakemake, which is Python-based and SLURM-aware. Otherwise start with Make and move on only when it stops fitting." class="figure mx-auto d-block"><div class="figcaption">Start with Make; move on only when it stops
+fitting.</div>
+</figure></div>
 </section><section><h2 class="section-heading" id="docker-maximum-environment-control">Docker: Maximum Environment Control<a class="anchor" aria-label="anchor" href="#docker-maximum-environment-control"></a></h2>
 <hr class="half-width"><p>For even more control, Docker containerizes your entire environment:
 not just Python packages, but the operating system, all system
@@ -539,7 +541,7 @@ software:</p>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a><span class="ex">module</span> load r</span>
 <span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a><span class="ex">module</span> load cuda</span></code></pre>
 </div>
-<p>(On Sagehen the real module names are
+<p>(On Sagehen HPC the real module names are
 <code>openmpi/4.1.5_ucx-1.14.0</code>, <code>r/4.5.1</code>,
 <code>cuda/12.2.1</code>, and so on – run <code>module avail</code> to
 see what is installed. There are no <code>intel</code>,
@@ -712,8 +714,8 @@ any links that you are not going to use.
   "url": "https://pomona-college.github.io/hpc-reproducible-research/instructor/06-pip-and-containers.html",
   "identifier": "https://pomona-college.github.io/hpc-reproducible-research/instructor/06-pip-and-containers.html",
   "dateCreated": "2026-03-05",
-  "dateModified": "2026-08-24",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>

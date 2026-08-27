@@ -450,7 +450,7 @@
         
 <section id="aio-01-why-reproducibility"><p>Content from <a href="01-why-reproducibility.html">Why Reproducibility Matters</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-reproducible-research/edit/main/episodes/01-why-reproducibility.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -544,6 +544,9 @@ operating systems, installed packages)</li>
 different results each time isn’t useful. Code that works on your laptop
 but breaks on the cluster is a problem. Code that depends on a package
 you’ll update next month might break later.</p>
+<figure><img src="../fig/02-reproducibility-workflow.png" alt="A pipeline from read-only raw data through a processing script to clean data, then an analysis script producing figures and tables. Underneath, a note that environment.yml pins the software, git records every change, and Make re-runs only what has gone stale." class="figure mx-auto d-block"><div class="figcaption">Everything downstream of raw data should come
+back from the scripts.</div>
+</figure>
 </div>
 </section><section><h2 class="section-heading" id="three-levels-of-reproducibility">Three Levels of Reproducibility<a class="anchor" aria-label="anchor" href="#three-levels-of-reproducibility"></a>
 </h2>
@@ -975,7 +978,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-03-project-directory-structure"><p>Content from <a href="03-project-directory-structure.html">Project Directory Structure</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-reproducible-research/edit/main/episodes/03-project-directory-structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -1046,7 +1049,9 @@ do?</li>
 </ul>
 <p><strong>This is preventable.</strong> The solution is a standardized
 project structure that clearly separates concerns.</p>
-</section><section><h2 class="section-heading" id="the-standard-research-project-structure">The Standard Research Project Structure<a class="anchor" aria-label="anchor" href="#the-standard-research-project-structure"></a>
+<figure><img src="../fig/01-project-structure.png" alt="A project directory layout. data/raw is never edited and kept read-only. data/processed is generated and safe to delete. src holds your scripts. results holds generated figures and tables. environment.yml records the exact software versions and the Makefile records how to rebuild everything. A note says that if you deleted everything generated, the Makefile and environment.yml should be able to rebuild it." class="figure mx-auto d-block"><div class="figcaption">The layout tells you what is safe to delete and
+what is not.</div>
+</figure></section><section><h2 class="section-heading" id="the-standard-research-project-structure">The Standard Research Project Structure<a class="anchor" aria-label="anchor" href="#the-standard-research-project-structure"></a>
 </h2>
 <hr class="half-width">
 <p>Here’s a widely-adopted structure for research projects:</p>
@@ -1213,7 +1218,7 @@ file -&gt; Analysis script(s) -&gt; Result file</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>A completed example for a climate data analysis project:</p>
 <pre><code>climate-analysis/
@@ -1539,7 +1544,7 @@ neighbor.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1611,7 +1616,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-05-conda-environments"><p>Content from <a href="05-conda-environments.html">Conda Environment Management</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-reproducible-research/edit/main/episodes/05-conda-environments.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -1729,7 +1734,7 @@ pre-installed packages (larger download)</li>
 <strong>Miniconda</strong>: Minimal distribution, you install what
 you need (recommended for HPC)</li>
 </ul>
-<p>On Sagehen, conda is available via:</p>
+<p>On Sagehen HPC, conda is available via:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1948,7 +1953,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-06-pip-and-containers"><p>Content from <a href="06-pip-and-containers.html">pip, Docker, and HPC Modules</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-reproducible-research/edit/main/episodes/06-pip-and-containers.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -2035,6 +2040,9 @@ dependencies and pip to manage Python packages</li>
 <span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a><span class="at">    </span><span class="kw">-</span><span class="at"> tensorflow==2.8.0</span></span>
 <span id="cb4-11"><a href="#cb4-11" tabindex="-1" aria-label="code-block-4-11"></a><span class="at">    </span><span class="kw">-</span><span class="at"> scikit-learn==1.2.2</span></span></code></pre>
 </div>
+<figure><img src="../fig/04-tool-decision.png" alt="A decision tree for choosing a workflow tool. If the pipeline has fewer than about ten steps, use Make, which is already installed. If it involves many SLURM jobs or a complex dependency graph, use Snakemake, which is Python-based and SLURM-aware. Otherwise start with Make and move on only when it stops fitting." class="figure mx-auto d-block"><div class="figcaption">Start with Make; move on only when it stops
+fitting.</div>
+</figure>
 </div>
 </section><section><h2 class="section-heading" id="docker-maximum-environment-control">Docker: Maximum Environment Control<a class="anchor" aria-label="anchor" href="#docker-maximum-environment-control"></a>
 </h2>
@@ -2113,7 +2121,7 @@ software:</p>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a><span class="ex">module</span> load r</span>
 <span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a><span class="ex">module</span> load cuda</span></code></pre>
 </div>
-<p>(On Sagehen the real module names are
+<p>(On Sagehen HPC the real module names are
 <code>openmpi/4.1.5_ucx-1.14.0</code>, <code>r/4.5.1</code>,
 <code>cuda/12.2.1</code>, and so on – run <code>module avail</code> to
 see what is installed. There are no <code>intel</code>,
@@ -2234,7 +2242,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-07-intro-makefiles"><p>Content from <a href="07-intro-makefiles.html">Introduction to Makefiles</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-reproducible-research/edit/main/episodes/07-intro-makefiles.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -2305,7 +2313,9 @@ halfway, where do I restart?</p>
 <p>This is tedious and error-prone. The solution: <strong>Make</strong>,
 a tool that automates step-by-step workflows and only re-runs what’s
 necessary.</p>
-</section><section><h2 class="section-heading" id="what-is-make">What Is Make?<a class="anchor" aria-label="anchor" href="#what-is-make"></a>
+<figure><img src="../fig/03-make-dag.png" alt="A dependency graph. download_data fetches raw files, clean_data removes outliers, and the pipeline then splits into analyze which runs statistics and train_model which fits the model. Those lead to visualize which creates plots and evaluate which tests accuracy, and both feed into report, which compiles the paper." class="figure mx-auto d-block"><div class="figcaption">Make works out which steps are stale and re-runs
+only those.</div>
+</figure></section><section><h2 class="section-heading" id="what-is-make">What Is Make?<a class="anchor" aria-label="anchor" href="#what-is-make"></a>
 </h2>
 <hr class="half-width">
 <p>Make is a tool that:</p>
@@ -2583,7 +2593,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-08-advanced-make"><p>Content from <a href="08-advanced-make.html">Advanced Make Patterns</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-reproducible-research/edit/main/episodes/08-advanced-make.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -2897,13 +2907,18 @@ removes both results and processed data.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<pre><code>
-![`make -n` on Sagehen previews every command in the four-stage pipeline without running anything.](fig/08-make-dry-run-pipeline.png){alt='Terminal in a make-demo directory on Sagehen where make -n has been run. The dry-run output lists mkdir and python3 commands for four pipeline stages: cleaning data, analysis, figure generation, and table generation.'}bash
-$ touch src/visualize.py
-$ make -n
-python3 src/visualize.py results/analysis.csv results/figure.png</code></pre>
+<figure><img src="../fig/08-make-dry-run-pipeline.png" alt="Terminal in a make-demo directory on Sagehen HPC where make -n has been run. The dry-run output lists mkdir and python3 commands for four pipeline stages: cleaning data, analysis, figure generation, and table generation." class="figure mx-auto d-block"><div class="figcaption">
+<code>make -n</code> on Sagehen HPC previews
+every command in the four-stage pipeline without running anything.</div>
+</figure><div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="ex">$</span> touch src/visualize.py</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a><span class="ex">$</span> make <span class="at">-n</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a><span class="ex">python3</span> src/visualize.py results/analysis.csv results/figure.png</span></code></pre>
+</div>
 <p>Make only re-runs the visualization step because:</p>
 <ul>
 <li>
@@ -3263,7 +3278,7 @@ evolution.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3685,7 +3700,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-11-slurm-pipeline-basics"><p>Content from <a href="11-slurm-pipeline-basics.html">SLURM Pipeline Basics</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-reproducible-research/edit/main/episodes/11-slurm-pipeline-basics.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -3732,8 +3747,8 @@ any links that you are not going to use.
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">make</span> all</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="co"># Entire pipeline runs in sequence on your CPU cores</span></span></code></pre>
 </div>
-<p>On an HPC cluster like Sagehen with many cores available, you want to
-parallelize:</p>
+<p>On an HPC cluster like Sagehen HPC with many cores available, you
+want to parallelize:</p>
 <ul>
 <li>Download data (1 job)</li>
 <li>Process samples in parallel (100 independent jobs)</li>
@@ -4039,7 +4054,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-12-multistep-slurm"><p>Content from <a href="12-multistep-slurm.html">Multi-Step SLURM Workflows</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-reproducible-research/edit/main/episodes/12-multistep-slurm.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 50 minutes</p>
@@ -4072,7 +4087,7 @@ submission?</li>
 submission</li>
 <li>Capture environment state and input checksums for
 reproducibility</li>
-<li>Monitor and debug multi-job workflows on Sagehen</li>
+<li>Monitor and debug multi-job workflows on Sagehen HPC</li>
 <li>Make pipelines idempotent so reruns do not waste compute</li>
 </ul>
 </div>
@@ -4423,7 +4438,7 @@ jobs</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">MAKEFILE<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4483,7 +4498,7 @@ have left the lab.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p>Verify that an <code>environment.yml</code> (or similar) is
@@ -5046,7 +5061,7 @@ research project.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>A completed documentation package should contain these three
 files:</p>
@@ -5193,8 +5208,8 @@ any links that you are not going to use.
   "url": "https://pomona-college.github.io/hpc-reproducible-research/instructor/aio.html",
   "identifier": "https://pomona-college.github.io/hpc-reproducible-research/instructor/aio.html",
   "dateCreated": "2026-03-05",
-  "dateModified": "2026-08-26",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>
