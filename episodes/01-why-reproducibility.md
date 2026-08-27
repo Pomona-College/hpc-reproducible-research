@@ -45,6 +45,8 @@ Another distinction:
 
 In research, you need all three. A stochastic algorithm that gives different results each time isn't useful. Code that works on your laptop but breaks on the cluster is a problem. Code that depends on a package you'll update next month might break later.
 
+![Everything downstream of raw data should come back from the scripts.](fig/02-reproducibility-workflow.png){alt='A pipeline from read-only raw data through a processing script to clean data, then an analysis script producing figures and tables. Underneath, a note that environment.yml pins the software, git records every change, and Make re-runs only what has gone stale.'}
+
 ## Three Levels of Reproducibility
 
 Let's think about reproducibility in practical layers:

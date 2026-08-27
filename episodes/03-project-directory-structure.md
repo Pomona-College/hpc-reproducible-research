@@ -55,6 +55,8 @@ Questions she can't answer:
 
 **This is preventable.** The solution is a standardized project structure that clearly separates concerns.
 
+![The layout tells you what is safe to delete and what is not.](fig/01-project-structure.png){alt='A project directory layout. data/raw is never edited and kept read-only. data/processed is generated and safe to delete. src holds your scripts. results holds generated figures and tables. environment.yml records the exact software versions and the Makefile records how to rebuild everything. A note says that if you deleted everything generated, the Makefile and environment.yml should be able to rebuild it.'}
+
 ## The Standard Research Project Structure
 
 Here's a widely-adopted structure for research projects:
