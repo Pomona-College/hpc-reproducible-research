@@ -17,7 +17,7 @@ exercises: 20
 
 - Integrate Make with SLURM for automated, reproducible job submission
 - Capture environment state and input checksums for reproducibility
-- Monitor and debug multi-job workflows on Sagehen
+- Monitor and debug multi-job workflows on Sagehen HPC
 - Make pipelines idempotent so reruns do not waste compute
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::

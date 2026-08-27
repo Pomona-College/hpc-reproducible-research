@@ -122,7 +122,7 @@ Bonus: Lab PI now trusts her with more complex work
 
 **Reproducibility Experience:** Wants reproducibility but constrained by circumstances
 - Working on thesis with finite computational budget
-- Runs experiments on shared Sagehen cluster (limited GPU hours)
+- Runs experiments on shared Sagehen HPC cluster (limited GPU hours)
 - Multiple experiments running in parallel with different hyperparameters
 - Collaborating with another student who writes code differently
 - Needs to submit code for conference reviews but rushed

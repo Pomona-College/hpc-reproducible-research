@@ -65,6 +65,8 @@ dependencies:
     - scikit-learn==1.2.2
 ```
 
+![Start with Make; move on only when it stops fitting.](fig/04-tool-decision.png){alt='A decision tree for choosing a workflow tool. If the pipeline has fewer than about ten steps, use Make, which is already installed. If it involves many SLURM jobs or a complex dependency graph, use Snakemake, which is Python-based and SLURM-aware. Otherwise start with Make and move on only when it stops fitting.'}
+
 ## Docker: Maximum Environment Control
 
 For even more control, Docker containerizes your entire environment: not just Python packages, but the operating system, all system libraries, compiler versions, everything.
@@ -126,7 +128,7 @@ module load r
 module load cuda
 ```
 
-(On Sagehen the real module names are `openmpi/4.1.5_ucx-1.14.0`, `r/4.5.1`,
+(On Sagehen HPC the real module names are `openmpi/4.1.5_ucx-1.14.0`, `r/4.5.1`,
 `cuda/12.2.1`, and so on -- run `module avail` to see what is installed. There
 are no `intel`, `fftw`, or `gcc` modules.)
 

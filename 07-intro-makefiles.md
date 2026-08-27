@@ -51,6 +51,8 @@ Questions that arise: Did I skip a step? If I change the visualization code, do 
 
 This is tedious and error-prone. The solution: **Make**, a tool that automates step-by-step workflows and only re-runs what's necessary.
 
+![Make works out which steps are stale and re-runs only those.](fig/03-make-dag.png){alt='A dependency graph. download_data fetches raw files, clean_data removes outliers, and the pipeline then splits into analyze which runs statistics and train_model which fits the model. Those lead to visualize which creates plots and evaluate which tests accuracy, and both feed into report, which compiles the paper.'}
+
 ## What Is Make?
 
 Make is a tool that:

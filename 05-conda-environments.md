@@ -65,7 +65,7 @@ conda comes in two flavors:
 - **Anaconda**: Full distribution with hundreds of pre-installed packages (larger download)
 - **Miniconda**: Minimal distribution, you install what you need (recommended for HPC)
 
-On Sagehen, conda is available via:
+On Sagehen HPC, conda is available via:
 ```bash
 module load miniconda3
 ```

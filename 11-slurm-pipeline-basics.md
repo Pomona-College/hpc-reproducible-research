@@ -30,7 +30,7 @@ make all
 # Entire pipeline runs in sequence on your CPU cores
 ```
 
-On an HPC cluster like Sagehen with many cores available, you want to parallelize:
+On an HPC cluster like Sagehen HPC with many cores available, you want to parallelize:
 
 - Download data (1 job)
 - Process samples in parallel (100 independent jobs)
@@ -271,7 +271,7 @@ $ squeue -u $(whoami)
   48203       amd    step3     PD  0:00     1  (Dependency)
 ```
 
-![The dependency chain live on Sagehen: step 1 running, steps 2 and 3 pending with reason `(Dependency)` — all on the default `amd` partition.](fig/11-sbatch-dependency-chain-squeue.png){alt='Terminal on Sagehen showing three sbatch submissions where each job ID is captured into a shell variable and the next job depends on it via afterok. The squeue output lists one job running as step1 on node a005 in the amd partition, while two jobs are pending with reason Dependency.'}
+![The dependency chain live on Sagehen HPC: step 1 running, steps 2 and 3 pending with reason `(Dependency)` — all on the default `amd` partition.](fig/11-sbatch-dependency-chain-squeue.png){alt='Terminal on Sagehen showing three sbatch submissions where each job ID is captured into a shell variable and the next job depends on it via afterok. The squeue output lists one job running as step1 on node a005 in the amd partition, while two jobs are pending with reason Dependency.'}
 The scripts' SBATCH headers don't set `--partition`, so all three jobs land on
 `amd` -- Sagehen's default partition. Add `--partition=short` (or `gpu`) when a
 step needs a different one.
